@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poker Blinds Timer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Poker Blinds Timer</h1>
+        <div class="chips-container">
+            <div class="chip small-blind-chip">
+                <label for="small-blind">Small Blind:</label>
+                <input type="number" id="small-blind" placeholder="">
+            </div>
+            <div class="chip big-blind-chip">
+                <label for="big-blind">Big Blind:</label>
+                <input type="number" id="big-blind" placeholder="">
+            </div>
+        </div>
+        
+        <!-- Add the "Select a Time Below" text -->
+        <div class="instruction-text">Select a Time Below</div>
+    
+        <!-- Timer buttons -->
+        <div class="button-group">
+            <button id="2-min" class="interval-button">2 Min</button>
+            <button id="4-min" class="interval-button">4 Min</button>
+            <button id="6-min" class="interval-button">6 Min</button>
+            <button id="8-min" class="interval-button">8 Min</button>
+            <button id="10-min" class="interval-button">10 Min</button>
+            <button id="15-min" class="interval-button">15 Min</button>
+        </div>
+        
+        <!-- Timer itself, initially hidden -->
+        <div class="timer" id="timer">15:00</div>
+    
+        <!-- Start Timer button, initially placed below the timer buttons -->
+        <div class="start-button-group">
+            <button id="start-timer">Start Timer</button>
+        </div>
+    
+        <!-- Other controls (Reset, Stop, etc.), initially hidden -->
+        <div class="button-group">
+            <button id="reset-timer" style="display:none;">Reset Timer</button>
+            <button id="reset-all" style="display:none;">Reset All</button>
+            <button id="stop-timer" style="display:none;">Stop Timer</button>
+            <button id="resume-timer" style="display:none;">Resume Timer</button>
+        </div>
+    
+        <div class="blinds">
+            <p>Small Blind: <span id="current-small-blind">0</span></p>
+            <p>Big Blind: <span id="current-big-blind">0</span></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
